@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
+/* Layout */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   text-align: center;
   font-family: 'Poetsen One', sans-serif;
@@ -111,3 +118,70 @@ https://scrimba.com/learn/htmlandcss
 Text:
 Want to create your own Birthday GIFt site? Take this HTML & CSS course.
 */
+
+/* Navigation */
+
+.main-nav {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+}
+
+.main-nav li {
+  background-color: #9a83dd;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: ease-in-out 0.25s;
+}
+
+.main-nav li:hover {
+  background-color: #7862b7;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Gallery */
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  margin-top: 1rem;
+  padding: 2rem 4rem;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.gallery-img {
+  width: 300px;
+}
+
+@media (max-width: 900px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* About Darth */
+
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.about-darth {
+  margin-top: 2rem;
+}
+
+.about-darth article p {
+  margin-top: 1rem;
+}
